@@ -1,8 +1,9 @@
 <resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.MentalHealthApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/primary_50</item>
+        <item name="colorPrimaryDark">@color/primary_70</item>
+        <item name="colorAccent">@color/black</item>
     </style>
 
     <style name="Theme.MentalHealthApp" parent="Base.Theme.MentalHealthApp" />
