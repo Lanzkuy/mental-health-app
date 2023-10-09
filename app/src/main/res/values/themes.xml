@@ -4,6 +4,8 @@
         <item name="colorPrimary">@color/primary_50</item>
         <item name="colorPrimaryDark">@color/primary_70</item>
         <item name="colorAccent">@color/black</item>
+        
+        <item name="fontFamily">@font/inter_family</item>
     </style>
 
     <style name="Theme.MentalHealthApp" parent="Base.Theme.MentalHealthApp" />
