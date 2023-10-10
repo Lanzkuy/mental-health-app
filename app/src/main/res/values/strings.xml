@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Mental Health App</string>
+    <string name="get_started_description">Begin your journey to better mental health \nwith Mental Health App.</string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="back">Back</string>
+    <string name="welcome_desc">Sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
 </resources>
