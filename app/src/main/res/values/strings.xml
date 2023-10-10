@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Mental Health App</string>
+    <string name="get_started_description">Begin your journey to better mental health \nwith Mental Health App.</string>
+
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
