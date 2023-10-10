@@ -54,17 +54,19 @@
         tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="8dp"
         android:width="300dp"
         android:height="50dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_70"
         android:text="@string/signin"
+        android:textAllCaps="false"
         android:textColor="@color/white"
-        android:layout_marginBottom="8dp"
         android:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
         app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
         app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
         app:layout_constraintStart_toStartOf="@+id/btnSignUp" />
@@ -79,8 +81,10 @@
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_10"
         android:text="@string/signup"
+        android:textAllCaps="false"
         android:textColor="@color/primary_90"
         android:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imgIllustration"
         app:layout_constraintStart_toStartOf="@+id/imgIllustration"
