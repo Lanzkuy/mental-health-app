@@ -81,10 +81,10 @@
         <ImageView
             android:id="@+id/ivCarousel"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
+            android:layout_height="175dp"
             android:layout_marginTop="20dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/img_banner_1"
             app:layout_constraintBottom_toTopOf="@+id/navigation"
             app:layout_constraintTop_toBottomOf="@id/ivProfilePicture"

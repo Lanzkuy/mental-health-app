@@ -38,20 +38,22 @@
             app:fontFamily="@font/inter_semibold"
             app:layout_constraintBottom_toTopOf="@id/tvContent"
             app:layout_constraintStart_toEndOf="@id/ivThumbnail"
-            app:layout_constraintTop_toTopOf="@id/ivThumbnail" />
+            app:layout_constraintTop_toTopOf="@id/ivThumbnail"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/tvContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:maxLength="120"
+            android:maxLength="100"
             android:maxLines="3"
             android:text="@string/lorem_ipsum"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/ivThumbnail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/tvTitle"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
