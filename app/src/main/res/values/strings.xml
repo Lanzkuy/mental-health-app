@@ -11,4 +11,20 @@
     <string name="remember_me">Remember me</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="greeting_john">Hello, John</string>
+    <string name="how_are_you_today">How are you today?</string>
+    <string name="home">Home</string>
+    <string name="forum">Forum</string>
+    <string name="chat">Chat</string>
+    <string name="settings">Settings</string>
+    <string name="menu">Menu</string>
+    <string name="consultation">Consultation</string>
+    <string name="history">History</string>
+    <string name="other">Other</string>
+    <string name="article">Article</string>
+    <string name="title">Title</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus varius, turpis in vestibulum vestibulum, odio urna volutpat leo, nec tincidunt sapien justo nec justo. Nulla facilisi. Quisque et facilisis dolor.</string>
+    <string name="nothing_here">Nothing here</string>
 </resources>
