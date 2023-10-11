@@ -10,6 +10,8 @@
     <string name="password">Password</string>
     <string name="remember_me">Remember me</string>
     <string name="forgot_password">Forgot password?</string>
+    <string name="enter_your_email">Enter your email to reset your password</string>
+    <string name="send">Send</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
     <string name="greeting_john">Hello, John</string>
     <string name="how_are_you_today">How are you today?</string>
@@ -30,4 +32,6 @@
     <string name="username">Username</string>
     <string name="i_accept_the_terms_of_agreement">I accept the terms of agreement</string>
     <string name="confirm_password">Confirm Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
