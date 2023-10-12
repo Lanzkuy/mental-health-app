@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/username"
+        android:text="@string/username_value"
         android:textColor="@color/neutral_90"
         android:textSize="24sp"
         app:fontFamily="@font/inter_semibold"
@@ -171,4 +171,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
         app:layout_constraintEnd_toEndOf="@+id/valueGender"
         app:layout_constraintTop_toTopOf="@+id/tvEmail" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
