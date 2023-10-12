@@ -18,6 +18,8 @@
     <string name="new_password">New Password</string>
     <string name="confirm_new_password">Confirm your new Password</string>
     <string name="resend_code">Resend Code?</string>
+    <string name="password_updated">Password Updated</string>
+    <string name="password_updated_desc">Your password has been updated</string>
     <string name="submit">Submit</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
     <string name="greeting_john">Hello, John</string>
