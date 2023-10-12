@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".presentation.ProfileFragment">
 
-<!-- TODO: Update blank fragment layout -->
     <Button
         android:id="@+id/btnBack"
         style="@style/Widget.MentalHealthApp.Button.IconButton"
@@ -26,27 +25,28 @@
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="100dp"
         android:text="@string/profile"
         android:textColor="@color/neutral_90"
         android:textSize="24sp"
-        android:textStyle="bold"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toEndOf="@+id/btnBack"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
 
     <ImageView
         android:id="@+id/pProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:src="@drawable/profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvProfile" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvProfile"
+        app:layout_constraintStart_toStartOf="@+id/tvProfile"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfile"
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvUName"
@@ -56,9 +56,9 @@
         android:text="@string/username"
         android:textColor="@color/neutral_90"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="@+id/pProfile"
+        app:layout_constraintStart_toStartOf="@+id/pProfile"
         app:layout_constraintTop_toBottomOf="@+id/pProfile" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -66,7 +66,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:layout_marginTop="48dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_50"
         android:text="@string/edit_profile"
@@ -74,72 +73,71 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvUName"
+        app:layout_constraintStart_toStartOf="@+id/tvUName"
         app:layout_constraintTop_toBottomOf="@+id/tvUName"
-        tools:ignore="TextContrastCheck,VisualLintButtonSize"
-        tools:layout_editor_absoluteX="7dp" />
+        app:layout_constraintVertical_bias="0.05"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="24dp"
         android:text="@string/name"
         android:textSize="18sp"
         app:fontFamily="@font/inter_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnEditProfile"
+        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile"
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/valueName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/name_value"
         android:textSize="18sp"
-        app:fontFamily="@font/inter_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
-        app:layout_constraintStart_toEndOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/btnEditProfile" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvName"
+        app:layout_constraintEnd_toEndOf="@+id/btnEditProfile"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintTop_toTopOf="@+id/tvName" />
 
     <TextView
         android:id="@+id/tvBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
         android:text="@string/bio"
         android:textSize="18sp"
         app:fontFamily="@font/inter_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintVertical_bias="0.1" />
 
     <TextView
         android:id="@+id/valueBio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="@string/bio_value"
         android:textSize="18sp"
-        app:fontFamily="@font/inter_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toEndOf="@+id/tvBio"
-        app:layout_constraintTop_toBottomOf="@+id/valueName" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvBio"
+        app:layout_constraintEnd_toEndOf="@+id/valueName"
+        app:layout_constraintTop_toTopOf="@+id/tvBio" />
 
     <TextView
         android:id="@+id/tvGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
         android:text="@string/gender"
         android:textSize="18sp"
         app:fontFamily="@font/inter_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvBio" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvBio"
+        app:layout_constraintTop_toBottomOf="@+id/tvBio"
+        app:layout_constraintVertical_bias="0.12" />
 
     <TextView
         android:id="@+id/valueGender"
@@ -147,35 +145,30 @@
         android:layout_height="wrap_content"
         android:text="@string/gender_value"
         android:textSize="18sp"
-        app:fontFamily="@font/inter_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
-        app:layout_constraintStart_toEndOf="@+id/tvGender"
-        tools:layout_editor_absoluteY="537dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvGender"
+        app:layout_constraintEnd_toEndOf="@+id/valueBio"
+        app:layout_constraintTop_toTopOf="@+id/tvGender" />
 
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="36dp"
         android:text="@string/email"
         android:textSize="18sp"
         app:fontFamily="@font/inter_medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvGender" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvGender"
+        app:layout_constraintTop_toBottomOf="@+id/tvGender"
+        app:layout_constraintVertical_bias="0.15" />
 
     <TextView
         android:id="@+id/valueEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:labelFor="@id/etEmail"
         android:text="@string/email_value"
         android:textSize="18sp"
-        app:fontFamily="@font/inter_medium"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toEndOf="@+id/tvEmail"
-        app:layout_constraintTop_toBottomOf="@+id/valueGender" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvEmail"
+        app:layout_constraintEnd_toEndOf="@+id/valueGender"
+        app:layout_constraintTop_toTopOf="@+id/tvEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>

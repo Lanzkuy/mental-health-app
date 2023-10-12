@@ -18,9 +18,7 @@
     <string name="name">Name</string>
     <string name="name_value">John Doe</string>
     <string name="bio">Bio</string>
-    <string name="bio_value">Avaible</string>
+    <string name="bio_value">Available</string>
     <string name="gender">Gender</string>
     <string name="gender_value">Male</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
