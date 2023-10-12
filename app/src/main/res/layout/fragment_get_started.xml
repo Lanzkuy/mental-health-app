@@ -54,6 +54,7 @@
         tools:ignore="TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"

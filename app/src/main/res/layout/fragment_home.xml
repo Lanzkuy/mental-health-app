@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfilePicture"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_simmon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/Circular"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/greeting_john"
+            android:textColor="@color/neutral_90"
+            android:textSize="16sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintStart_toEndOf="@id/ivProfilePicture"
+            app:layout_constraintTop_toTopOf="@id/ivProfilePicture" />
+
+        <TextView
+            android:id="@+id/tvHowAreYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/how_are_you_today"
+            android:textColor="@color/neutral_90"
+            app:layout_constraintStart_toStartOf="@+id/tvGreeting"
+            app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:minWidth="24dp"
+            android:minHeight="28dp"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@id/ivNotification"
+            app:layout_constraintEnd_toStartOf="@id/ivNotification"
+            app:layout_constraintTop_toTopOf="@id/ivNotification"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/ivNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:minWidth="24dp"
+            android:minHeight="28dp"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintBottom_toBottomOf="@+id/tvHowAreYou"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivProfilePicture"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_top"
+            app:layout_constraintBottom_toTopOf="@id/ivCarousel" />
+
+        <ImageView
+            android:id="@+id/ivCarousel"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_banner_1"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintTop_toBottomOf="@id/ivProfilePicture"
+            app:layout_constraintVertical_bias="0"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:textColor="@color/neutral_90"
+            android:textSize="20sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@id/ivCarousel"
+            app:layout_constraintVertical_bias="0.04" />
+
+        <GridLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            android:rowCount="1"
+            app:layout_constraintEnd_toEndOf="@+id/ivNotification"
+            app:layout_constraintStart_toStartOf="@+id/ivProfilePicture"
+            app:layout_constraintTop_toBottomOf="@id/tvMenu">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardConsultation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/primary_50"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_consultation"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/consultation"
+                    android:textColor="@color/neutral_90"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/primary_50"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_history"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/history"
+                    android:textColor="@color/neutral_90"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardForum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/primary_50"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_forum"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/forum"
+                    android:textColor="@color/neutral_90"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/primary_50"
+                    app:cardCornerRadius="5dp">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_other"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/other"
+                    android:textColor="@color/neutral_90"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tvArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/article"
+            android:textColor="@color/neutral_90"
+            android:textSize="20sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toTopOf="@+id/navigation"
+            app:layout_constraintStart_toStartOf="@+id/tvMenu"
+            app:layout_constraintTop_toBottomOf="@id/menuLayout"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <ScrollView
+            android:id="@+id/scrollArticle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/navigation"
+            app:layout_constraintEnd_toEndOf="@id/menuLayout"
+            app:layout_constraintStart_toStartOf="@id/menuLayout"
+            app:layout_constraintTop_toBottomOf="@id/tvArticle">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvArticle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_article" />
+
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/shadow_top"
+            app:layout_constraintBottom_toTopOf="@id/navigation" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white"
+            app:itemActiveIndicatorStyle="@null"
+            app:itemIconTint="@drawable/icon_tint_selector"
+            app:itemTextColor="@drawable/icon_tint_selector"
+            app:labelVisibilityMode="labeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/menu_navigation"
+            tools:ignore="VisualLintBottomNav" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

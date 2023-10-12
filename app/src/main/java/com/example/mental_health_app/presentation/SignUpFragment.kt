@@ -5,17 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.mental_health_app.R
-import com.example.mental_health_app.databinding.FragmentGetStartedBinding
+import com.example.mental_health_app.databinding.FragmentSignInBinding
+import com.example.mental_health_app.databinding.FragmentSignUpBinding
 
-class GetStartedFragment : Fragment() {
-    private lateinit var binding: FragmentGetStartedBinding
+class SignUpFragment : Fragment() {
+    private lateinit var binding: FragmentSignUpBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentGetStartedBinding.inflate(layoutInflater)
+        binding = FragmentSignUpBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -26,20 +28,24 @@ class GetStartedFragment : Fragment() {
     }
 
     private fun initializeComponent() {
-        binding.btnSignIn.setOnClickListener {
+        binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.fragmentContainer, SignInFragment(), "SignIn")
-                .addToBackStack("SignIn")
-                .commit()
+                .popBackStack()
         }
 
         binding.btnSignUp.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentContainer, SignUpFragment(), "SignUp")
-                .addToBackStack("SignUp")
+                .replace(R.id.fragmentContainer, SignInFragment(), null)
+                .commit()
+        }
+
+        binding.tvSignIn.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, SignInFragment(), null)
                 .commit()
         }
     }
+
 }

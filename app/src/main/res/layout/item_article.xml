@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="?attr/materialCardViewElevatedStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/primary_50"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/primary_50"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ivThumbnail"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_thumbnail_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:text="@string/title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toTopOf="@id/tvContent"
+            app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+            app:layout_constraintTop_toTopOf="@id/ivThumbnail"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLength="100"
+            android:maxLines="3"
+            android:text="@string/lorem_ipsum"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/ivThumbnail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
