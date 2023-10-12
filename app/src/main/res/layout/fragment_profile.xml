@@ -49,11 +49,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tvProfile" />
 
     <TextView
-        android:id="@+id/tvUName"
+        android:id="@+id/valueUName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/username"
+        android:text="@string/username_value"
         android:textColor="@color/neutral_90"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -74,7 +74,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
-        app:layout_constraintTop_toBottomOf="@+id/tvUName"
+        app:layout_constraintTop_toBottomOf="@+id/valueUName"
         tools:ignore="TextContrastCheck,VisualLintButtonSize"
         tools:layout_editor_absoluteX="7dp" />
 
@@ -145,13 +145,14 @@
         android:id="@+id/valueGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
         android:text="@string/gender_value"
         android:textSize="18sp"
         app:fontFamily="@font/inter_medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toEndOf="@+id/tvGender"
-        tools:layout_editor_absoluteY="537dp" />
+        app:layout_constraintTop_toBottomOf="@+id/valueBio" />
 
     <TextView
         android:id="@+id/tvEmail"

@@ -12,15 +12,24 @@
     <string name="remember_me">Remember me</string>
     <string name="forgot_password">Forgot password?</string>
     <string name="dont_have_an_account">Don\'t have an account?</string>
+<!--    Profile page-->
     <string name="profile">Profile</string>
-    <string name="username">John_Doe</string>
-    <string name="edit_profile">Edit Profile</string>
+    <string name="username_value">John_Doe</string>
     <string name="name">Name</string>
     <string name="name_value">John Doe</string>
     <string name="bio">Bio</string>
     <string name="bio_value">Avaible</string>
     <string name="gender">Gender</string>
     <string name="gender_value">Male</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<!--    Proile Edit-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="edit_picture">Edit picture</string>
+    <string name="username">Username</string>
+    <string name="submit">Submit</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+
 </resources>
