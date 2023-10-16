@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mental Health App</string>
+    <string name="app_name">WeFine</string>
     <string name="get_started_description">Begin your journey to better mental health \nwith Mental Health App.</string>
     <string name="signin">Sign In</string>
     <string name="signup">Sign Up</string>
@@ -34,13 +34,12 @@
     <string name="gender">Gender</string>
     <string name="gender_value">Male</string>
     <string name="edit_picture">Edit picture</string>
-    <string name="submit">Submit</string>
     <string-array name="arrGender">
         <item>Male</item>
         <item>Female</item>
     </string-array>
     <string name="change_password">Change Password</string>
-    <string name="old_password">Old Password</string
+    <string name="old_password">Old Password</string>
     <string name="greeting_john">Hello, John</string>
     <string name="how_are_you_today">How are you today?</string>
     <string name="home">Home</string>
@@ -57,7 +56,6 @@
     <string name="nothing_here">Nothing here</string>
     <string name="create_your_account">Create your account</string>
     <string name="please_enter_your_credentials">Please enter your credentials</string>
-    <string name="username">Username</string>
     <string name="i_accept_the_terms_of_agreement">I accept the terms of agreement</string>
     <string name="confirm_password">Confirm Password</string>
 </resources>

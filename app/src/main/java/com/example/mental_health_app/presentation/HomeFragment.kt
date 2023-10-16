@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
         images.add(R.drawable.img_banner_3)
         binding.ivCarousel.animateCarousel(
             images,
-            2000L,
+            1800L,
             1500L,
             1000
         )

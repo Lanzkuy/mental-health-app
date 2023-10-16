@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import com.example.mental_health_app.R
 import com.example.mental_health_app.databinding.FragmentSignInBinding
 
@@ -30,6 +29,13 @@ class SignInFragment : Fragment() {
         binding.btnBack.setOnClickListener {
             requireActivity().supportFragmentManager
                 .popBackStack()
+        }
+
+        binding.tvForgotPassword.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, ForgotPasswordFragment(), null)
+                .commit()
         }
 
         binding.btnSignIn.setOnClickListener {
