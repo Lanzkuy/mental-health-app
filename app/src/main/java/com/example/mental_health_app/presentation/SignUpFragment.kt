@@ -26,11 +26,6 @@ class SignUpFragment : Fragment() {
     }
 
     private fun initializeComponent() {
-        binding.btnBack.setOnClickListener {
-            requireActivity().supportFragmentManager
-                .popBackStack()
-        }
-
         binding.btnSignUp.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
