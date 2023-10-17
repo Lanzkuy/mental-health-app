@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_10"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consultation">
+
+    <TextView
+        android:id="@+id/consultation_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="212dp"
+        android:text="Konsultasi sudah selesai!"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img_consutation_end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consultation_end" />
+
+    <TextView
+        android:id="@+id/consultation_end_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="Semoga konsultasi tadi\ndapat membantu ☺"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textLanjut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:gravity="center"
+        android:text="Lanjut ke halaman:"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/consultation_end_more" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInvoice"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/secondary_50"
+        android:text="Invoice"
+        android:textColor="@color/white"
+        ndroid:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLanjut" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnResult"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="Result"
+        android:textColor="@color/white"
+        ndroid:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="@+id/btnInvoice"
+        app:layout_constraintHorizontal_bias="0.30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLanjut" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

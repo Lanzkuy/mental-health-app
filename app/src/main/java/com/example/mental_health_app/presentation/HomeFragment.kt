@@ -17,7 +17,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment() {
+class -HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var articleAdapter: ArticleAdapter
     private lateinit var articles: MutableList<Article>

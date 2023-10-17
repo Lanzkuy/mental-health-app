@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consultation">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/hallo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="202dp"
+        android:gravity="center"
+        android:text="Hallo, Jhon!\nKami siap membantumu ☺"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+
+        android:src="@drawable/img_consultation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hallo"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="Apa yang kamu butuhkan?"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_consultation" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPsikolog"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="Psikolog"
+        android:textColor="@color/white"
+        ndroid:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPsikiater"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="Psikiater"
+        android:textColor="@color/white"
+        ndroid:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="Panduan Memilih:"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPsikolog" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

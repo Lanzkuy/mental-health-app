@@ -58,4 +58,6 @@
     <string name="please_enter_your_credentials">Please enter your credentials</string>
     <string name="i_accept_the_terms_of_agreement">I accept the terms of agreement</string>
     <string name="confirm_password">Confirm Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
