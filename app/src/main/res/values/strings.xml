@@ -60,4 +60,13 @@
     <string name="confirm_password">Confirm Password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="konsultasi_sudah_selesai">Konsultasi sudah selesai!</string>
+    <string name="semoga_konsultasi_tadi_ndapat_membantu">Semoga konsultasi tadi\ndapat membantu ☺</string>
+    <string name="invoice">Invoice</string>
+    <string name="result">Result</string>
+    <string name="lanjut_ke_halaman">Lanjut ke halaman:</string>
+    <string name="hallo_jhon_nkami_siap_membantumu">Hallo, Jhon!\nKami siap membantumu ☺</string>
+    <string name="apa_yang_kamu_butuhkan">Apa yang kamu butuhkan?</string>
+    <string name="psikolog">Psikolog</string>
+    <string name="psikiater">Psikiater</string>
 </resources>

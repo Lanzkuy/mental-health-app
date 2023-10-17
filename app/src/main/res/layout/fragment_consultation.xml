@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Consultation">
-
-    <!-- TODO: Update blank fragment layout -->
+    tools:context=".presentation.ConsultationFragment">
 
     <TextView
         android:id="@+id/hallo"
@@ -14,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="202dp"
         android:gravity="center"
-        android:text="Hallo, Jhon!\nKami siap membantumu ☺"
+        android:text="@string/hallo_jhon_nkami_siap_membantumu"
         android:textColor="@color/neutral_90"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-
         android:src="@drawable/img_consultation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
-        android:text="Apa yang kamu butuhkan?"
+        android:text="@string/apa_yang_kamu_butuhkan"
         android:textColor="@color/neutral_90"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,9 +52,9 @@
         android:layout_marginTop="37dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_50"
-        android:text="Psikolog"
+        android:text="@string/psikolog"
         android:textColor="@color/white"
-        ndroid:textSize="18sp"
+        android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.175"
@@ -73,30 +70,13 @@
         android:layout_marginEnd="40dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_50"
-        android:text="Psikiater"
+        android:text="@string/psikiater"
         android:textColor="@color/white"
-        ndroid:textSize="18sp"
+        android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question" />
-
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="Panduan Memilih:"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPsikolog" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
