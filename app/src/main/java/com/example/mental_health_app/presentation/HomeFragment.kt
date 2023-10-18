@@ -50,6 +50,14 @@ class HomeFragment : Fragment() {
                 .commit()
         }
 
+        binding.cardConsultation.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, ConsultationFragment(), "Notification")
+                .addToBackStack("Consultation")
+                .commit()
+        }
+
         binding.cardOther.setOnClickListener {
             showBottomSheet()
         }

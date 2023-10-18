@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ConsultationListFragment">
+
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/Widget.MentalHealthApp.Button.IconButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="18dp"
+        android:backgroundTint="@color/primary_50"
+        android:contentDescription="@string/back"
+        app:icon="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/tvProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consultation"
+        android:textColor="@color/neutral_90"
+        android:textSize="24sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <Button
+        android:id="@+id/btnHistory"
+        style="@style/Widget.MentalHealthApp.Button.IconButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="18dp"
+        android:backgroundTint="@color/primary_50"
+        app:icon="@drawable/ic_history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:height="50dp"
+        android:background="@drawable/edit_text"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="@id/btnBack"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <Spinner
+        android:id="@+id/spCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/spinner"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/btnHistory"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/btnHistory" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/spCategory"
+        app:layout_constraintStart_toStartOf="@id/etSearch"
+        app:layout_constraintTop_toBottomOf="@id/etSearch">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConsultant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_consultant" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
