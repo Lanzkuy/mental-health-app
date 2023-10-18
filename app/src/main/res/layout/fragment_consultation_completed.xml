@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/primary_10"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primary_10"
     tools:context=".presentation.ConsultationCompletedFragment">
 
     <TextView
@@ -12,14 +12,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="212dp"
         android:text="@string/konsultasi_sudah_selesai"
         android:textColor="@color/neutral_90"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,9 +28,9 @@
         android:layout_height="150dp"
         android:layout_gravity="start|top"
         android:layout_marginTop="20dp"
-        android:src="@drawable/img_consutation_end"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/img_illustration_completed_consultation"
+        app:layout_constraintEnd_toEndOf="@+id/consultation_end"
+        app:layout_constraintStart_toStartOf="@+id/consultation_end"
         app:layout_constraintTop_toBottomOf="@+id/consultation_end" />
 
     <TextView
@@ -42,8 +43,8 @@
         android:text="@string/semoga_konsultasi_tadi_ndapat_membantu"
         android:textColor="@color/neutral_90"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
@@ -55,41 +56,41 @@
         android:text="@string/lanjut_ke_halaman"
         android:textColor="@color/neutral_90"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/consultation_end_more"
+        app:layout_constraintStart_toStartOf="@+id/consultation_end_more"
         app:layout_constraintTop_toBottomOf="@+id/consultation_end_more" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnInvoice"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
+        android:width="120dp"
+        android:height="50dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/secondary_50"
         android:text="@string/invoice"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.81"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textLanjut" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnResult"
-        android:layout_width="120dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:width="120dp"
+        android:height="50dp"
         android:background="@drawable/button"
         android:backgroundTint="@color/primary_50"
         android:text="@string/result"
         android:textColor="@color/white"
         android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
-        app:layout_constraintEnd_toEndOf="@+id/btnInvoice"
-        app:layout_constraintHorizontal_bias="0.30"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textLanjut" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
