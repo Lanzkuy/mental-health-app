@@ -13,8 +13,7 @@
 
     <style name="Theme.MentalHealthApp.Splashscreen" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/primary_10</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_brand</item>
-        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
         <item name="postSplashScreenTheme">@style/Theme.MentalHealthApp</item>
     </style>
 

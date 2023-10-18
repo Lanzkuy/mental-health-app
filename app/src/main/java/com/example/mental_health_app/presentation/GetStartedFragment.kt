@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mental_health_app.R
 import com.example.mental_health_app.databinding.FragmentGetStartedBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class GetStartedFragment : Fragment() {
     private lateinit var binding: FragmentGetStartedBinding
@@ -21,6 +22,9 @@ class GetStartedFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.navigation)
+        bottomNavigationView.visibility = View.GONE
 
         initializeComponent()
     }

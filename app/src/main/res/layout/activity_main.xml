@@ -12,4 +12,23 @@
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_get_started"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@drawable/shadow_top"
+        app:layout_constraintBottom_toTopOf="@id/navigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemIconTint="@drawable/icon_tint_selector"
+        app:itemTextColor="@drawable/icon_tint_selector"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_navigation"
+        tools:ignore="VisualLintBottomNav" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

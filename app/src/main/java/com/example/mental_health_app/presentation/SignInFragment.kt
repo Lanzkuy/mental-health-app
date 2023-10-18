@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.mental_health_app.R
 import com.example.mental_health_app.databinding.FragmentSignInBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SignInFragment : Fragment() {
     private lateinit var binding: FragmentSignInBinding
@@ -21,6 +22,10 @@ class SignInFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.navigation)
+        bottomNavigationView.visibility = View.GONE
+        bottomNavigationView.menu.getItem(0).isChecked = true
 
         initializeComponent()
     }
