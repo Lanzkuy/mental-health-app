@@ -33,6 +33,18 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initializeComponent()
+    }
+
+    private fun initializeComponent() {
+        binding.ivNotification.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, NotificationFragment(), "Notification")
+                .addToBackStack("Notification")
+                .commit()
+        }
+
         val images = ArrayList<Int>()
         images.add(R.drawable.img_banner_1)
         images.add(R.drawable.img_banner_4)

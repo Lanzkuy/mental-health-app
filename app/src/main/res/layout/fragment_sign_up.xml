@@ -5,22 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.SignUpFragment">
-
-    <Button
-        android:id="@+id/btnBack"
-        style="@style/Widget.MentalHealthApp.Button.IconButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="18dp"
-        android:backgroundTint="@color/primary_50"
-        android:contentDescription="@string/back"
-        app:icon="@drawable/ic_arrow_left"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03"
-        tools:ignore="TouchTargetSizeCheck" />
-
     <TextView
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
@@ -28,11 +12,14 @@
         android:layout_marginTop="16dp"
         android:text="@string/create_your_account"
         android:textColor="@color/neutral_90"
+        android:layout_marginStart="18dp"
         android:textSize="24sp"
         android:textStyle="bold"
         app:fontFamily="@font/inter_medium"
-        app:layout_constraintStart_toStartOf="@id/btnBack"
-        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
 
     <TextView
         android:id="@+id/tvWelcomeDesc"
@@ -183,8 +170,8 @@
         android:textSize="18sp"
         app:fontFamily="@font/inter_semibold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintVertical_bias="0.80"
+        app:layout_constraintTop_toBottomOf="@+id/cbRememberMe"
+        app:layout_constraintVertical_bias="0.70"
         tools:ignore="TextContrastCheck,VisualLintButtonSize"
         tools:layout_editor_absoluteX="18dp" />
 
