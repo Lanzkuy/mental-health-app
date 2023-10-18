@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.SettingsFragment">
+
+    <TextView
+        android:id="@+id/tvSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textColor="@color/neutral_90"
+        android:textSize="24sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/tvAccountSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/account_settings"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSettings"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/tvMyProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/my_profile"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@+id/tvAccountSetting"
+        app:layout_constraintTop_toBottomOf="@id/tvAccountSetting" />
+
+    <TextView
+        android:id="@+id/tvChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/change_password"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvMyProfile" />
+
+    <TextView
+        android:id="@+id/tvDarkMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/dark_mode"
+        android:textSize="16sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toStartOf="@+id/switchDarkMode"
+        app:layout_constraintStart_toStartOf="@+id/tvChangePassword"
+        app:layout_constraintTop_toBottomOf="@id/tvChangePassword" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvDarkMode"
+        app:layout_constraintEnd_toEndOf="@id/tvChangePassword"
+        app:layout_constraintTop_toTopOf="@id/tvDarkMode" />
+
+    <TextView
+        android:id="@+id/tvPushNotification"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/push_notifications"
+        android:textSize="16sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toStartOf="@+id/switchDarkMode"
+        app:layout_constraintStart_toStartOf="@+id/tvDarkMode"
+        app:layout_constraintTop_toBottomOf="@id/tvDarkMode" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchPushNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/tvPushNotification"
+        app:layout_constraintEnd_toEndOf="@id/switchDarkMode"
+        app:layout_constraintTop_toTopOf="@id/tvPushNotification" />
+
+    <TextView
+        android:id="@+id/tvBlockContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/block_sensitive_content"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvPushNotification" />
+
+    <View
+        android:id="@+id/dividerOne"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/neutral_50"
+        app:layout_constraintEnd_toEndOf="@id/tvBlockContent"
+        app:layout_constraintStart_toStartOf="@id/tvBlockContent"
+        app:layout_constraintTop_toBottomOf="@id/tvBlockContent" />
+
+    <TextView
+        android:id="@+id/tvMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/more"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/dividerOne"
+        app:layout_constraintTop_toBottomOf="@id/dividerOne"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:id="@+id/tvPrivacySecurity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/privacy_and_security"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvMore" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/language"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvPrivacySecurity" />
+
+
+    <TextView
+        android:id="@+id/tvHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/help"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvLanguage" />
+
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/about"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/tvHelp" />
+
+    <View
+        android:id="@+id/dividerTwo"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/neutral_50"
+        app:layout_constraintEnd_toEndOf="@id/tvAbout"
+        app:layout_constraintStart_toStartOf="@id/tvAbout"
+        app:layout_constraintTop_toBottomOf="@id/tvAbout" />
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="8dp"
+        android:paddingVertical="8dp"
+        android:text="@string/logout"
+        android:textSize="16sp"
+        app:drawableRightCompat="@drawable/ic_chevron_right"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toBottomOf="@id/dividerTwo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

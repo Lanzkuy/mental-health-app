@@ -14,6 +14,7 @@ import com.example.mental_health_app.databinding.BottomSheetHomeBinding
 import com.example.mental_health_app.databinding.FragmentHomeBinding
 import com.example.mental_health_app.model.Article
 import com.example.mental_health_app.presentation.adapter.ArticleAdapter
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.CoroutineScope
@@ -37,6 +38,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bottomNavigationView: BottomNavigationView = requireActivity().findViewById(R.id.navigation)
+        bottomNavigationView.visibility = View.VISIBLE
 
         initializeComponent()
     }
@@ -89,6 +93,15 @@ class HomeFragment : Fragment() {
 
         val layout = bindingBottomSheet.bottomSheetHome
         layout.minimumHeight = Resources.getSystem().displayMetrics.heightPixels
+
+        bindingBottomSheet.cardConsultation.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, ConsultationFragment(), "Notification")
+                .addToBackStack("Consultation")
+                .commit()
+            bottomSheet.hide()
+        }
 
         bottomSheet.show()
     }

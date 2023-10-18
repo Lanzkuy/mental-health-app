@@ -87,4 +87,15 @@
     <string name="consult_now">Consult Now</string>
     <string name="consult_later">Consult Later</string>
     <string name="logo">Logo</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="my_profile">My profile</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="push_notifications">Push notifications</string>
+    <string name="block_sensitive_content">Block sensitive content</string>
+    <string name="more">More</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
+    <string name="language">Language</string>
+    <string name="privacy_and_security">Privacy and security</string>
+    <string name="logout">Logout</string>
 </resources>
