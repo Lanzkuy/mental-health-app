@@ -58,7 +58,6 @@
     <string name="please_enter_your_credentials">Please enter your credentials</string>
     <string name="i_accept_the_terms_of_agreement">I accept the terms of agreement</string>
     <string name="confirm_password">Confirm Password</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="konsultasi_sudah_selesai">Konsultasi sudah selesai!</string>
     <string name="semoga_konsultasi_tadi_ndapat_membantu">Semoga konsultasi tadi\ndapat membantu ☺</string>
@@ -69,4 +68,12 @@
     <string name="apa_yang_kamu_butuhkan">Apa yang kamu butuhkan?</string>
     <string name="psikolog">Psikolog</string>
     <string name="psikiater">Psikiater</string>
+    <string name="notifications">Notifications</string>
+    <string name="clear_all">Clear all</string>
+    <string name="notification_header">Notification Header</string>
+    <string name="description_of_notification">Description of notification</string>
+    <string name="notification_time">2 hours ago</string>
+    <string name="yoga">Yoga</string>
+    <string name="meditate">Meditate</string>
+    <string name="mood_tracker">Mood Tracker</string>
 </resources>

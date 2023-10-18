@@ -1,17 +1,22 @@
 package com.example.mental_health_app.presentation
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AlphaAnimation
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mental_health_app.R
+import com.example.mental_health_app.databinding.BottomSheetHomeBinding
 import com.example.mental_health_app.databinding.FragmentHomeBinding
 import com.example.mental_health_app.model.Article
 import com.example.mental_health_app.presentation.adapter.ArticleAdapter
+import com.google.android.material.bottomsheet.BottomSheetBehavior
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -19,6 +24,7 @@ import kotlinx.coroutines.launch
 
 class -HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
+    private lateinit var bindingBottomSheet: BottomSheetHomeBinding
     private lateinit var articleAdapter: ArticleAdapter
     private lateinit var articles: MutableList<Article>
 
@@ -32,6 +38,22 @@ class -HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        initializeComponent()
+    }
+
+    private fun initializeComponent() {
+        binding.ivNotification.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, NotificationFragment(), "Notification")
+                .addToBackStack("Notification")
+                .commit()
+        }
+
+        binding.cardOther.setOnClickListener {
+            showBottomSheet()
+        }
 
         val images = ArrayList<Int>()
         images.add(R.drawable.img_banner_1)
@@ -48,6 +70,20 @@ class -HomeFragment : Fragment() {
         binding.rvArticle.layoutManager = LinearLayoutManager(requireActivity())
         articleAdapter = ArticleAdapter(articles)
         binding.rvArticle.adapter = articleAdapter
+    }
+
+    private fun showBottomSheet() {
+        bindingBottomSheet = BottomSheetHomeBinding.inflate(layoutInflater)
+        val bottomSheet = BottomSheetDialog(requireActivity())
+        bottomSheet.setContentView(bindingBottomSheet.root)
+
+        val bottomSheetBehavior = BottomSheetBehavior.from(bindingBottomSheet.bottomSheetHome.parent as View)
+        bottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+
+        val layout = bindingBottomSheet.bottomSheetHome
+        layout.minimumHeight = Resources.getSystem().displayMetrics.heightPixels
+
+        bottomSheet.show()
     }
 
     private fun ImageView.animateCarousel(

@@ -29,16 +29,14 @@ class GetStartedFragment : Fragment() {
         binding.btnSignIn.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentContainer, SignInFragment(), "SignIn")
-                .addToBackStack("SignIn")
+                .replace(R.id.fragmentContainer, SignInFragment(), null)
                 .commit()
         }
 
         binding.btnSignUp.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.fragmentContainer, SignUpFragment(), "SignUp")
-                .addToBackStack("SignUp")
+                .replace(R.id.fragmentContainer, SignUpFragment(), null)
                 .commit()
         }
     }

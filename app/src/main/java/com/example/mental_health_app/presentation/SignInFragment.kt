@@ -26,11 +26,6 @@ class SignInFragment : Fragment() {
     }
 
     private fun initializeComponent() {
-        binding.btnBack.setOnClickListener {
-            requireActivity().supportFragmentManager
-                .popBackStack()
-        }
-
         binding.tvForgotPassword.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()
