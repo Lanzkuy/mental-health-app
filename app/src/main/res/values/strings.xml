@@ -65,4 +65,7 @@
     <string name="notification_header">Notification Header</string>
     <string name="description_of_notification">Description of notification</string>
     <string name="notification_time">2 hours ago</string>
+    <string name="yoga">Yoga</string>
+    <string name="meditate">Meditate</string>
+    <string name="mood_tracker">Mood Tracker</string>
 </resources>
