@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ConsultationFragment">
+
+    <TextView
+        android:id="@+id/hallo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="202dp"
+        android:gravity="center"
+        android:text="@string/hallo_jhon_nkami_siap_membantumu"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_consultation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/img_consultation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hallo"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/apa_yang_kamu_butuhkan"
+        android:textColor="@color/neutral_90"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_consultation" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPsikolog"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="@string/psikolog"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonPsikiater"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="@string/psikiater"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
