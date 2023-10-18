@@ -12,7 +12,24 @@ class ConsultantAdapter(
     private val consultants: List<Consultant>
 ) : RecyclerView.Adapter<ConsultantAdapter.ViewHolder>(
 ) {
-    class ViewHolder(val binding: ItemConsultantBinding) : RecyclerView.ViewHolder(binding.root)
+    private lateinit var listener: AdapterListener
+
+    interface AdapterListener {
+        fun onClick(position: Int)
+    }
+
+    fun setItemClick(listener: AdapterListener) {
+        this.listener = listener
+    }
+
+    class ViewHolder(val binding: ItemConsultantBinding, listener: AdapterListener) :
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            itemView.setOnClickListener {
+                listener.onClick(adapterPosition)
+            }
+        }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemConsultantBinding.inflate(
@@ -20,13 +37,14 @@ class ConsultantAdapter(
             parent,
             false
         )
-        return ViewHolder(binding)
+        return ViewHolder(binding, listener)
     }
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(consultants[position]) {
             holder.binding.tvName.text = name
+            holder.binding.ivProfilePicture.setImageResource(profilePicture)
             holder.binding.tvRole.text = if (role == 1) "Psikolog" else "Psikiater"
             holder.binding.tvRating.text = rating.toString()
             if (status == 1) {

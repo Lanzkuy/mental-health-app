@@ -79,4 +79,11 @@
     <string name="role">Role</string>
     <string name="rating_value">4.5</string>
     <string name="available">Available</string>
+    <string name="patient_value">120</string>
+    <string name="experience_value">8</string>
+    <string name="price">Price</string>
+    <string name="price_value">Rp. 120.000,00</string>
+    <string name="biography">Biography</string>
+    <string name="consult_now">Consult Now</string>
+    <string name="consult_later">Consult Later</string>
 </resources>
