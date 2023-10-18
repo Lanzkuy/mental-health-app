@@ -46,6 +46,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun initializeComponent() {
+        binding.ivSearch.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainer, SearchFragment(), "Notification")
+                .addToBackStack("Notification")
+                .commit()
+        }
+
         binding.ivNotification.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()

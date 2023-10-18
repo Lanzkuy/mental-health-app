@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
+import com.example.mental_health_app.presentation.ChatFragment
+import com.example.mental_health_app.presentation.ForumFragment
 import com.example.mental_health_app.presentation.GetStartedFragment
 import com.example.mental_health_app.presentation.HomeFragment
 import com.example.mental_health_app.presentation.SettingsFragment
@@ -29,7 +31,7 @@ class MainActivity : AppCompatActivity(), Communicator {
         }
 
         bottomNavigationView.setOnItemSelectedListener {
-            when(it.itemId) {
+            when (it.itemId) {
                 R.id.nav_home -> {
                     supportFragmentManager
                         .beginTransaction()
@@ -37,12 +39,23 @@ class MainActivity : AppCompatActivity(), Communicator {
                         .commit()
                     true
                 }
+
                 R.id.nav_chat -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, ChatFragment(), null)
+                        .commit()
                     true
                 }
+
                 R.id.nav_forum -> {
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.fragmentContainer, ForumFragment(), null)
+                        .commit()
                     true
                 }
+
                 R.id.nav_setting -> {
                     supportFragmentManager
                         .beginTransaction()
