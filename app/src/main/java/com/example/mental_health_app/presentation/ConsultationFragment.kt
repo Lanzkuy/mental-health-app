@@ -26,6 +26,11 @@ class ConsultationFragment : Fragment() {
     }
 
     private fun initializeComponent() {
+        binding.btnBack.setOnClickListener {
+            requireActivity().supportFragmentManager
+                .popBackStack()
+        }
+
         binding.btnPsikolog.setOnClickListener {
             requireActivity().supportFragmentManager
                 .beginTransaction()

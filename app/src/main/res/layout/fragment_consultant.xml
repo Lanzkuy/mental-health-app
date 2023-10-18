@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ConsultantFragment">
+
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/Widget.MentalHealthApp.Button.IconButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="18dp"
+        android:backgroundTint="@color/primary_50"
+        android:contentDescription="@string/back"
+        app:icon="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageView
+        android:id="@+id/ivProfilePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/name"
+        android:textSize="20sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="@id/ivProfilePicture"
+        app:layout_constraintStart_toStartOf="@id/ivProfilePicture"
+        app:layout_constraintTop_toBottomOf="@id/ivProfilePicture" />
+
+    <TextView
+        android:id="@+id/tvRole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/role"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvPatient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:backgroundTint="@color/primary_30"
+        android:drawablePadding="16dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/patient_value"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_patient"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExperience"
+        app:layout_constraintEnd_toStartOf="@id/tvExperience"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvExperience" />
+
+    <TextView
+        android:id="@+id/tvExperience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/edit_text"
+        android:backgroundTint="@color/primary_30"
+        android:drawablePadding="16dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/experience_value"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_briefcase"
+        app:layout_constraintEnd_toEndOf="@+id/tvRole"
+        app:layout_constraintStart_toStartOf="@+id/tvRole"
+        app:layout_constraintTop_toBottomOf="@id/tvRole" />
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:backgroundTint="@color/primary_30"
+        android:drawablePadding="16dp"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="16dp"
+        android:text="@string/rating_value"
+        android:textColor="@color/black"
+        app:drawableStartCompat="@drawable/ic_star"
+        app:layout_constraintBottom_toBottomOf="@+id/tvExperience"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvExperience"
+        app:layout_constraintTop_toTopOf="@+id/tvExperience" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/priceLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/primary_30"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="@id/tvRating"
+        app:layout_constraintStart_toStartOf="@id/tvPatient"
+        app:layout_constraintTop_toBottomOf="@id/tvExperience">
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="20sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPriceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/price_value"
+            android:textSize="20sp"
+            app:fontFamily="@font/inter_semibold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvBiography"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/biography"
+        android:textSize="18sp"
+        app:fontFamily="@font/inter_semibold"
+        app:layout_constraintStart_toStartOf="@id/priceLayout"
+        app:layout_constraintTop_toBottomOf="@id/priceLayout" />
+
+    <TextView
+        android:id="@+id/tvBiographyValue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="8"
+        android:text="@string/lorem_ipsum"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNow"
+        app:layout_constraintEnd_toEndOf="@id/priceLayout"
+        app:layout_constraintStart_toStartOf="@id/tvBiography"
+        app:layout_constraintTop_toBottomOf="@id/tvBiography"
+        tools:ignore="VisualLintLongText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="@string/consult_now"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_mental"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btnLater"
+        app:layout_constraintEnd_toEndOf="@+id/btnLater"
+        app:layout_constraintStart_toStartOf="@+id/btnLater"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLater"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button"
+        android:backgroundTint="@color/primary_50"
+        android:text="@string/consult_later"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_calendar"
+        app:iconSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/priceLayout"
+        app:layout_constraintStart_toStartOf="@id/priceLayout"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
