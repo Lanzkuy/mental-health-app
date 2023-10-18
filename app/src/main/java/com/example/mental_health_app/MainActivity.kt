@@ -2,14 +2,17 @@ package com.example.mental_health_app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.Fragment
 import com.example.mental_health_app.presentation.GetStartedFragment
 import com.example.mental_health_app.utils.Communicator
 
 class MainActivity : AppCompatActivity(), Communicator {
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()

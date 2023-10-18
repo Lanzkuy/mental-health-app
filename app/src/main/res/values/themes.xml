@@ -11,6 +11,13 @@
 
     <style name="Theme.MentalHealthApp" parent="Base.Theme.MentalHealthApp" />
 
+    <style name="Theme.MentalHealthApp.Splashscreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/primary_10</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_brand</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="postSplashScreenTheme">@style/Theme.MentalHealthApp</item>
+    </style>
+
     <style name="Widget.MentalHealthApp.Button.IconButton" parent="Widget.Material3.Button.IconButton">
         <item name="shapeAppearance">@style/ShapeAppearance.MentalHealthApp.Shape.Corner</item>
         <item name="android:insetTop">0dp</item>
@@ -33,11 +40,12 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">5dp</item>
     </style>
-    
+
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in</item>
         <item name="android:windowExitAnimation">@anim/slide_out</item>
     </style>
+
     <style name="DrawableLarge">
         <item name="android:textSize">10sp</item>
         <item name="android:scaleX">1.6</item>
